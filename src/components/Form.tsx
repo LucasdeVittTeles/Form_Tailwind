@@ -1,6 +1,20 @@
+import { useState, FormEvent } from "react";
+import { User } from "../types/User";
+
 const Form = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [agree, setAgree] = useState(false);
+
+  const [erros, setErros] = useState<User | null>(null);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    alert("Teste");
+  };
+
   return (
-    <form className="flex flex-col gap-3">
+    <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <div className="flex flex-col">
         <label className="text-sm" htmlFor="name">
           Nome
