@@ -1,6 +1,7 @@
 import { useState, FormEvent } from "react";
 import { User } from "../types/User";
 import { validate } from "../utils/validations";
+import toast from "react-hot-toast";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -29,7 +30,7 @@ const Form = () => {
     setEmail("");
     setAgree(false);
 
-    alert("Cadastro realizado com sucesso.");
+    toast.success("Cadastro realizado com sucesso.");
   };
 
   return (

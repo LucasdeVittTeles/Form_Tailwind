@@ -1,8 +1,10 @@
+import { Toaster } from "react-hot-toast";
 import Form from "./components/Form";
 
 function App() {
   return (
     <div className="bg-slate-900 min-h-screen w-full flex flex-col items-center justify-center">
+      <Toaster />
       <h1 className="font-bold-text-[2rem] text-white">Inscreva-se</h1>
       <p className="text-white">
         Assine nossa NewsLetter e mantenha-se informado
