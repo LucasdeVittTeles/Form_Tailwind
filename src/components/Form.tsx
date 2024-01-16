@@ -2,11 +2,13 @@ import { useState, FormEvent } from "react";
 import { User } from "../types/User";
 import { validate } from "../utils/validations";
 import toast from "react-hot-toast";
+import Modal from "./modal";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [agree, setAgree] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const [errors, setErrors] = useState<User | null>(null);
 
@@ -66,8 +68,12 @@ const Form = () => {
         )}
       </div>
       <div className="flex flex-col">
-        <a href="" className="text-xs underline mb-2">
-          Leia os termos
+        <a
+          href=""
+          className="text-xs underline mb-2"
+          onClick={() => setOpenModal(true)}
+        >
+          Clique aqui para ler os termos
         </a>
         <div className="flex gap-2 items-center">
           <input
@@ -89,6 +95,7 @@ const Form = () => {
       >
         Cadastrar
       </button>
+      <Modal isOpen={false} />
     </form>
   );
 };
