@@ -35,8 +35,16 @@ const Form = () => {
     toast.success("Cadastro realizado com sucesso.");
   };
 
+  console.log(openModal);
+
   return (
     <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+      <Modal
+        isOpen={openModal}
+        setOpenModal={setOpenModal}
+        title={"Titulo do Modal"}
+        description={"Testando o teste"}
+      />
       <div className="flex flex-col">
         <label className="text-sm" htmlFor="name">
           Nome
@@ -95,7 +103,6 @@ const Form = () => {
       >
         Cadastrar
       </button>
-      <Modal isOpen={false} />
     </form>
   );
 };
