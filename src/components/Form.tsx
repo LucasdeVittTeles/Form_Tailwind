@@ -79,7 +79,10 @@ const Form = () => {
         <a
           href=""
           className="text-xs underline mb-2"
-          onClick={() => setOpenModal(true)}
+          onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+            e.preventDefault();
+            setOpenModal(true);
+          }}
         >
           Clique aqui para ler os termos
         </a>

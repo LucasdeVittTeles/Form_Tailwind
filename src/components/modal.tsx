@@ -1,6 +1,6 @@
 type Props = {
   isOpen?: boolean;
-  setOpenModal: (isOpon: boolean) => void;
+  setOpenModal: (isOpen: boolean) => void;
   title: string;
   description: string;
 };
