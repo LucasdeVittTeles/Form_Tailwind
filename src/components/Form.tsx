@@ -43,7 +43,7 @@ const Form = () => {
         isOpen={openModal}
         setOpenModal={setOpenModal}
         title={"Titulo do Modal"}
-        description={"Testando o teste"}
+        description={"Voce deve concordar com os termos para seguir com o seu cadastro nessa plataforma"}
       />
       <div className="flex flex-col">
         <label className="text-sm" htmlFor="name">

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "@types/react-icons": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.33",
     "react": "^18.2.0",
