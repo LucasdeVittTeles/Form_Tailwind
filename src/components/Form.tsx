@@ -42,8 +42,10 @@ const Form = () => {
       <Modal
         isOpen={openModal}
         setOpenModal={setOpenModal}
-        title={"Titulo do Modal"}
-        description={"Voce deve concordar com os termos para seguir com o seu cadastro nessa plataforma"}
+        title={"Termos de cadastro"}
+        description={
+          "A política de termos e condições tem, basicamente, um conjunto de disposições com as quais um cliente/usuário tem de concordar para usar um serviço. A política deve cobrir todos os aspectos da usabilidade do seu site/bens/serviços. Ter esta política faz com que o seu negócio pareça mais profissional e também pode responder a qualquer questão/dúvida que venham às mentes dos visitantes que passam em sua Loja Online. Para ajudá-lo a começar, criamos um modelo dos Termos e Condições que você pode usar, basta inserir os seus dados relevantes e publicá-lo no seu Site."
+        }
       />
       <div className="flex flex-col">
         <label className="text-sm" htmlFor="name">
